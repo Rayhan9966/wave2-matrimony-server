@@ -233,6 +233,7 @@ async function run() {
       const id = req.params.id;
       const query = { _id: new ObjectId(id) }
       const result = await biodataCollection.findOne(query);
+      console.log(result, 'this is result');
       res.send(result);
     })
 
